@@ -8,21 +8,23 @@
 
 ```bash
 git config --global user.email 'b1katka@gmail.com'
-git config --global user.name 'Katarina Baxova'
+git config --global user.name 'Katarína Baxová'
 ```
 
-`vi ~/.gitconfig` - here is my Git configuration file
+`vi ~/.gitconfig` - here is my global Git configuration file
 
 `git add <file>`
 
 **git add + tab** - suggests files changed after the last commit
 
 `git status --short`
-- *A* - added
-- *M* - modified
-- *D* - deleted
-- *R* - renamed
-- *?* - unknown
+- `A_`  - added
+- `_M` - modified unstaged
+- `M_` - modified staged (added)
+- `_D` - deleted (with `rm` not `git rm`)
+- `D_` - deleted properly (with `git rm`)
+- `R_` - renamed
+- `??` - unknown (not under VCS)
 
 `git commit` - opens message editor, write a message:
 - what and how do I change/add...
@@ -39,11 +41,11 @@ connect file in my PC with the thing in github on the internet, call it there *o
 
 ### Other Notes
 **VCS** - version control system
-  (other: svm, mercury,...)
+  (other: svn, mercury,...)
 
-**ssh** - crypted connection (secure shell)
+**ssh** - encrypted connection (secure shell)
 
-**daemon** - process running on the background, for example Dropbox, Linux Update; Git does not have a daemon, it needs *to be told exactly*
+**daemon** - process running in the background, for example Dropbox, Linux Update; Git does not have a daemon, it needs *to be told exactly*
 
 try to use *the long options*, better `--help` than `-h`, you are then absolutely sure what command will be executed
 
@@ -58,8 +60,8 @@ try to use *the long options*, better `--help` than `-h`, you are then absolutel
 **untracked file** - file not added to the VCS
 - must be added before commit
 - no other option, commit ignores it/does not see it
-- commit ignors anything you don't tell him *not* to ignore = anything you did not explicitly added (`git add`)
+- commit ignores anything you don't tell him *not* to ignore = anything you did not explicitly add (`git add`)
 
-searching in *man pages*: `/`*thing_to_search*; `n` - jump to another result
+searching in *man pages*: `/`*thing_to_search*; `n` - jump to **n**ext result
 
 `ctrl+r` - reload browser page
